@@ -61,37 +61,39 @@ const TransactionList = (state = initialState, { payload, type, error, valueInpu
              return {
                 ...state,
                 data: sortedArrAsc,
-                valInput: valueInput.valInput
+                valInput: valueInput.valInput,
             } 
         case SORT_BY_DESC:
             let sortedArrDesc = sortDesc(valueInput, 'beneficiary_name') 
             return {
                 ...state,
                 data: sortedArrDesc,
-                valInput: valueInput.valInput
+                valInput: valueInput.valInput,
             } 
         case SORT_BY_NEWDATE:
             let sortedAscDate = sortAscDate(valueInput, 'created_at') 
             return {
                 ...state,
                 data: sortedAscDate,
-                valInput: valueInput.valInput
+                valInput: valueInput.valInput,
             }
         case SORT_BY_OLDDATE:
             let sortedDescDate = sortDescDate(valueInput, 'created_at') 
             return {
                 ...state,
                 data: sortedDescDate,
-                valInput: valueInput.valInput
+                valInput: valueInput.valInput,
             }  
         case SEARCH_BY_VALUE:
             let newData = Object.assign({}, state);
             let value = searchInput.searchInput
+           
             let filteredValues = state.filteredData.filter(dataList => {
                 return (
                     dataList.beneficiary_bank.toLowerCase().includes(value) || 
                     dataList.sender_bank.toLowerCase().includes(value) ||
-                    dataList.beneficiary_name.toLowerCase().includes(value)
+                    dataList.beneficiary_name.toLowerCase().includes(value) ||
+                    dataList.amount.toString().includes(value)
                 )
             });
 
@@ -110,6 +112,7 @@ const TransactionList = (state = initialState, { payload, type, error, valueInpu
             return {
                 ...state,
                 data : newData.dataFiltered,
+                searchValue : value
             }
         default:
             return state;
