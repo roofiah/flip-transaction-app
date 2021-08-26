@@ -4,17 +4,10 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import TransactionList from '../screens/Home/TransactionList';
 import TransactionDetail from '../screens/Detail/TransactionDetail';
-// import SplashScreen from '../pages/SplashScreen/SplashScreen';
 import { Colors } from '../styles/Colors';
 import { FontType } from '../styles/Fonts';
 
 const AppStack = createStackNavigator({
-    // SplashScreen: {
-    //     screen: SplashScreen,
-    //     navigationOptions: ({ navigation }) => ({
-    //         headerShown: false,
-    //     }),
-    // },
     TransactionList: {
         screen: TransactionList,
         navigationOptions: ({ navigation }) => ({

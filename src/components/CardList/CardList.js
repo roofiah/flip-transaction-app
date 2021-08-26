@@ -43,9 +43,9 @@ const CardList = props => {
                             }
                         </Text>
                         <View style={styles.DetContainer}>
-                            <Text>{FormatCurrency(amount)}</Text>
+                            <Text>{amount ? FormatCurrency(amount) : '-'}</Text>
                             <Text style={styles.bulletIcon}></Text>
-                            <Text>{FormatDate(createdAt)}</Text>
+                            <Text>{createdAt ? FormatDate(createdAt) : '-'}</Text>
                         </View>
                         
                     </View>

@@ -19,5 +19,18 @@ export default StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-around'
-    }
+    },
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        backgroundColor: Colors.white
+     },
+    activityIndicator: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: 80
+     }
 });

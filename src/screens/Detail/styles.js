@@ -73,7 +73,6 @@ export default StyleSheet.create({
     iconCopy: {
         width: 20,
         height: 20,
-        color: Colors.orange,
         marginLeft: 10
     },
     leftBox:{

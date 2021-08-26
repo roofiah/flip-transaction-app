@@ -57,7 +57,6 @@ class TransactionList extends Component {
     }
 
     render() {
-        console.log('ini halaman transactionlist', this.props.transactionList);
         const data = this.props.transactionList;
         return this.props.transactionList.loading 
                 ? ( <Loader loading={this.props.transactionList.loading} /> )
@@ -71,9 +70,13 @@ class TransactionList extends Component {
                                    this.openModal()
                                   }}
                             >
+                                <View style={styles.textFilterContainer}>
                                 <Text style={styles.textFilterName}>{valueSort(data.valInput)}</Text>
+                                </View>
+                                <View style={styles.imageFilterContainer}>
                                 <Image source={require('../../assets/images/dropdown.jpg')} style={styles.dropdownIcon}/>
-                                
+                                </View>
+                               
                                 <ModalOrder 
                                 {...this.props}
                                 isModalVisible={this.state.modalVisible} 

@@ -13,8 +13,6 @@ export const FormatCurrency = (value, options)  => {
         value = value.toFixed(options.significantDigits)
           
         const [currency, decimal] = value.split('.')
-        console.log('currency ', value.split('.'))
-        console.log('currency ', value)
         return `${options.symbol} ${currency.replace(
             /\B(?=(\d{3})+(?!\d))/g,
             options.thousandsSeparator

@@ -15,7 +15,6 @@ export const sortAsc = (arr, field) =>{
 
 // --- SORT NAME BY DESCENDING ---//
 export const sortDesc = (arr, field) =>{
-    console.log('array di filter sortDesc...',arr.dataArr)
     let dataArr = arr.dataArr
     return dataArr.sort(function (a, b) {
         if (a[field] > b[field]) {
@@ -30,15 +29,14 @@ export const sortDesc = (arr, field) =>{
 
 // --- SORT DATE BY ASCENDING ---//
 export const sortAscDate = (arr, field) => {
-    console.log('array di filter sortAscDate...',arr.dataArr)
     let dataArr = arr.dataArr
-    return dataArr.sort((a, b) => a.created_at.localeCompare(b.created_at));
+    return dataArr.sort((a, b) => b.created_at.localeCompare(a.created_at));
 }
 
 // --- SORT DATE BY DESCENDING ---//
 export const sortDescDate = (arr, field) => {
     let dataArr = arr.dataArr
-    return dataArr.sort((a, b) => b.created_at.localeCompare(a.created_at));
+    return dataArr.sort((a, b) => a.created_at.localeCompare(b.created_at));
 }
 
 // --- CHECK SEARCH FILTER ALREADY EXISTS--->

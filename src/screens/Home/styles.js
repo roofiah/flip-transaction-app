@@ -17,20 +17,28 @@ export default StyleSheet.create({
         flexDirection: 'row'
     },
     filterContainer:{
-        width:100,
-        height: 60,
-        backgroundColor: Colors.white,
+        flex: 1.3,
         flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        paddingRight: 8,
+        
+    },
+    textFilterContainer:{
+        width: '80%',
+        alignItems: 'flex-end'
+    },
+    imageFilterContainer:{
+        width: '20%',
+        alignItems: 'flex-start',
     },
     textFilterName: {
         color: Colors.orange,
         fontFamily: FontType.bold,
-        fontWeight: FontWeight.bold
+        fontWeight: FontWeight.bold,
     },
     dropdownIcon:{
         width: 30,
-        height: 20
-    }
+        height: 20,
+    },
+
 });

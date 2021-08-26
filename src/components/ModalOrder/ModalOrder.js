@@ -44,8 +44,7 @@ class ModalOrder extends Component {
     }else if (valInput == 'oldDate'){
       this.props.dispatch(sortByOldDate({valInput, dataArr}))
     }else{
-      console.log('ini setelah klik sort URUTKAN', valInput)
-      this.props.dispatch(fetchingTransactionListSuccess(dataArr))
+      this.props.dispatch(sortByNewDate({valInput, dataArr}))
     }
     
     this.setState({value: valInput });
@@ -72,7 +71,7 @@ class ModalOrder extends Component {
                     setModalVisible(false)
                   }}>
                     <View style={styles.radioCircle}>
-                      {this.state.value === res.key && <View style={styles.selectedRb} />}
+                      {transactionList.valInput === res.key && <View style={styles.selectedRb} />}
                     </View>
                     <Text style={styles.radioText}>{res.text}</Text>
                 </TouchableOpacity>

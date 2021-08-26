@@ -42,10 +42,10 @@ export const fetchingTransaction = () => {
             //     console.log('ini data setelah di proses', dataArr )
             //     // dispatch(fetchingTransactionListSuccess(dataArr));
             // } else {
-            //     dispatch(fetchingTransactionListFailure("Request Surah gagal. MohonPeriksa kembali koneksi internet Anda"));
+            //     dispatch(fetchingTransactionListFailure("Request Data gagal. MohonPeriksa kembali koneksi internet Anda"));
             // }
         } catch (error) {
-            dispatch(fetchingTransactionListFailure("Request Surah gagal. MohonPeriksa kembali koneksi internet Anda"));
+            dispatch(fetchingTransactionListFailure("Request Data gagal. MohonPeriksa kembali koneksi internet Anda"));
         }
     }
 }

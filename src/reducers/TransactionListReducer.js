@@ -37,7 +37,6 @@ const TransactionList = (state = initialState, { payload, type, error, valueInpu
                 refreshing: true,
             };
         case FETCHING_TRANSACTION_LIST_SUCCESS:
-            console.log ('ini list klik urutan...',payload)
             return {
                 ...state,
                 actionStatus: FETCHING_TRANSACTION_LIST_SUCCESS,
@@ -62,33 +61,33 @@ const TransactionList = (state = initialState, { payload, type, error, valueInpu
              return {
                 ...state,
                 data: sortedArrAsc,
-                valInput:'asc',
+                valInput: valueInput.valInput
             } 
         case SORT_BY_DESC:
             let sortedArrDesc = sortDesc(valueInput, 'beneficiary_name') 
             return {
                 ...state,
                 data: sortedArrDesc,
-                valInput: 'desc'
+                valInput: valueInput.valInput
             } 
         case SORT_BY_NEWDATE:
             let sortedAscDate = sortAscDate(valueInput, 'created_at') 
             return {
                 ...state,
                 data: sortedAscDate,
-                valInput: 'newDate'
+                valInput: valueInput.valInput
             }
         case SORT_BY_OLDDATE:
             let sortedDescDate = sortDescDate(valueInput, 'created_at') 
             return {
                 ...state,
                 data: sortedDescDate,
-                valInput: 'oldDate'
+                valInput: valueInput.valInput
             }  
         case SEARCH_BY_VALUE:
             let newData = Object.assign({}, state);
             let value = searchInput.searchInput
-            let filteredValues = state.data.filter(dataList => {
+            let filteredValues = state.filteredData.filter(dataList => {
                 return (
                     dataList.beneficiary_bank.toLowerCase().includes(value) || 
                     dataList.sender_bank.toLowerCase().includes(value) ||
@@ -97,7 +96,6 @@ const TransactionList = (state = initialState, { payload, type, error, valueInpu
             });
 
             let appliedSearch = state.appliedSearch;
-
             if (value) {
                 appliedSearch = addFilter(SEARCH_BY_VALUE, appliedSearch);
                 newData.dataFiltered = filteredValues;

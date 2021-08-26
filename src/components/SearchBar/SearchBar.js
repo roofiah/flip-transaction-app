@@ -15,41 +15,31 @@ class SearchBar extends Component {
         value: '',
       }
     }
-// const SearchBar = props => {
-    
+
     searchByInput(searchInput){
         const dataArr = this.props.transactionList.data
-        console.log('ini text input', searchInput)
-        console.log('isi dataArr di serachBar', dataArr)
         this.props.dispatch(searchByValue({searchInput}))
-        // let input = e.target.value;
-        // console.log('ini text input', input)
-        // this.setState({value: val})
-        // let searchInput = this.state.value
-        // this.props.dispatch(searchByValue(searchInput, dataArr))
     }
     render() {
         const dataArr = this.props.transactionList
         const {isModalVisible, setModalVisible, transactionList}= this.props
-        console.log('halo ini transaction list di searchbar 2', transactionList.data)
-    return (
-        <View style={styles.containerBox}>
-            <View style={styles.iconSearch}>
-                <Image source={require('../../assets/images/search_icon.png')} style={styles.image}/>
-            </View>
-            <View style={styles.inputContainer}>
-                <TextInput
-                    underlineColorAndroid={'transparent'}
-                    style={styles.searchInput}
-                    maxLength = {30} 
-                    autoCapitalize='none'
-                    placeholder='Cari nama, bank, atau nominal'
-                    onChangeText={e => this.searchByInput(e)}
-                />
-            </View>
-        </View>
-        
-    );
+        return (
+            <View style={styles.containerBox}>
+                <View style={styles.iconSearch}>
+                    <Image source={require('../../assets/images/search_icon.png')} style={styles.image}/>
+                </View>
+                <View style={styles.inputContainer}>
+                    <TextInput
+                        underlineColorAndroid={'transparent'}
+                        style={styles.searchInput}
+                        maxLength = {30} 
+                        autoCapitalize='none'
+                        placeholder='Cari nama, bank, atau nominal'
+                        onChangeText={e => this.searchByInput(e)}
+                    />
+                </View>
+            </View>   
+        );
     }
 };
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, View, Modal, ActivityIndicator } from 'react-native';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 import styles from './styles';
 
 const Loader = props => {
@@ -7,19 +8,16 @@ const Loader = props => {
         loading,
         ...attributes
     } = props;
-
+    
   return (
-    <Modal
-        transparent={true}
-        animationType={'none'}
-        visible={loading}
-        onRequestClose={() => {console.log('close modal')}}>
-            <View style={styles.modalBackground}>
-                <View style={styles.activityIndicatorWrapper}>
-                    <ActivityIndicator animating={loading} />
-                </View>
-            </View>
-    </Modal>
+    <View style = {styles.container}>
+        <ActivityIndicator
+            animating = {loading}
+            color = {Colors.primary}
+            size = "large"
+            style = {styles.activityIndicator}
+        />
+    </View>
   )
 }
 

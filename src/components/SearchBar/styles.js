@@ -14,7 +14,7 @@ export default StyleSheet.create({
         padding: 4,
         marginRight: 5,
         flexGrow: 1,
-        fontSize: 18,
+        fontSize: 16,
         borderRadius: 8,
         color: Colors.black,
       },
