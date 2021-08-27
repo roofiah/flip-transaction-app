@@ -10,7 +10,6 @@ export default StyleSheet.create({
         paddingTop: 10
     },
     cardContainer: {
-        // flex: 1,
         flexDirection: 'row',
         borderRadius:10,
         overflow:'hidden'
@@ -32,7 +31,6 @@ export default StyleSheet.create({
         backgroundColor:Colors.white
     },
     cardRightContainer:{
-        // flex: 1,
         justifyContent: 'center',
         alignItems: 'flex-end',
         backgroundColor:Colors.white,

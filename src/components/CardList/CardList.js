@@ -1,9 +1,8 @@
+// --- Component Card List Transaction--->
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { FormatCurrency, FormatDate } from '../../utils/Format';
-
 import styles from "./styles";
-import { Colors } from '../../styles/Colors';
 
 const CardList = props => {
     const {

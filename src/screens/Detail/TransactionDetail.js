@@ -1,3 +1,4 @@
+// --- Transaction Detail Screen --->
 import React, { Component } from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import styles from './styles';
@@ -17,7 +18,6 @@ class TransactionDetail extends Component {
 
     render() {
         const { dataDetail } = this.props.navigation.state.params;
-        console.log('ini data transaksi detail', dataDetail)
         return(
             <View style={styles.container}>
                 <View style={styles.contentContainer}>

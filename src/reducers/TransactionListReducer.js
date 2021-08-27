@@ -6,8 +6,7 @@ import {
     SORT_BY_DESC,
     SORT_BY_NEWDATE,
     SORT_BY_OLDDATE,
-    SEARCH_BY_VALUE,
-    SEARCH_BY_NOMINAL
+    SEARCH_BY_VALUE
 } from '../utils/ActionTypes';
 
 import {sortAsc, sortDesc, sortAscDate, sortDescDate, addFilter, removeFilter} from '../utils/Filter'

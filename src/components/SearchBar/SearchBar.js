@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import { View, Text, TouchableOpacity, TextInput, Image } from 'react-native';
+import { View, TextInput, Image } from 'react-native';
 import { searchByValue } from '../../actions/TransactionListAction'
 
 import styles from "./styles";
-import { Colors } from '../../styles/Colors';
 import { connect } from 'react-redux';
 
 class SearchBar extends Component {

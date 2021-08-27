@@ -9,6 +9,5 @@ export const SORT_BY_NEWDATE = 'sort_by_newdate';
 export const SORT_BY_OLDDATE = 'sort_by_olddate';
 
 export const SEARCH_BY_VALUE = 'search_by_value';
-export const SEARCH_BY_NOMINAL = 'search_by_nominal';
 
 

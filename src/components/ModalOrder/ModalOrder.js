@@ -1,7 +1,7 @@
+// --- Component Modal Filter --->
 import React, { Component } from "react";
-import { Alert, Modal, Text, Pressable, View, TouchableOpacity} from "react-native";
-import { sortByAsc, sortByDesc, sortByNewDate, sortByOldDate, fetchingTransactionListSuccess} from '../../actions/TransactionListAction'
-
+import { Modal, Text, View, TouchableOpacity } from "react-native";
+import { sortByAsc, sortByDesc, sortByNewDate, sortByOldDate } from '../../actions/TransactionListAction'
 import styles from "./styles";
 import { connect } from 'react-redux';
 
