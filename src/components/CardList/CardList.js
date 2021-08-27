@@ -35,11 +35,7 @@ const CardList = props => {
                             </Text>
                         </View>
                         <Text style={styles.textName}>
-                            {beneficiaryName ? 
-                                status == 'SUCCESS' ? 
-                                beneficiaryName.toUpperCase() : '- '+beneficiaryName.toUpperCase()
-                                : '-'
-                            }
+                            {beneficiaryName ? beneficiaryName.toUpperCase(): '-'}
                         </Text>
                         <View style={styles.DetContainer}>
                             <Text>{amount ? FormatCurrency(amount) : '-'}</Text>

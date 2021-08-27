@@ -47,7 +47,7 @@ class TransactionDetail extends Component {
                         <View style={styles.contentDesContainer}>
                             <View style={styles.leftBox}>
                                 <Text style={styles.textTitleDes}>
-                                    {dataDetail.status == 'SUCCESS' ? dataDetail.beneficiary_name.toUpperCase() : '- '+dataDetail.beneficiary_name.toUpperCase() }
+                                    {dataDetail.beneficiary_name.toUpperCase() }
                                 </Text>
                                 <Text>{dataDetail.account_number}</Text>
                             </View>
